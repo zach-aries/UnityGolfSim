@@ -41,7 +41,7 @@ public class Projectile : MonoBehaviour
 
     void OnCollisionStay(Collision collision)
     {
-        if (rigidBody != null && collision.gameObject.tag == "Plane")
+        if (rigidBody != null && collision.gameObject.tag == "Terrain")
         {
             // Apply a force opposite to the plane's normal vector
             Vector3 force = -collision.contacts[0].normal * rigidBody.velocity.magnitude * friction;
